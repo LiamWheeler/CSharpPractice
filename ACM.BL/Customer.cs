@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +46,26 @@ namespace ACM.BL
             }
         }
 
+        /// <summary>
+        /// Retrieve one customer
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
+        public Customer Retrieve(int customerId)
+        {
+            //Code that retrieves the defined customer
+            return new Customer();
+        }
+
+        /// <summary>
+        /// Saves the current customer
+        /// </summary>
+        /// <returns></returns>
+        public bool Save()
+        {
+            //Code that saves the defined customer
+            return true;
+        }
 
         /// <summary>
         /// Validates the customer data.
