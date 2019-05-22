@@ -8,7 +8,18 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public int CustomerID { get; private set; }
+
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
+
+        public int CustomerId { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
 

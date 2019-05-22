@@ -99,6 +99,21 @@ namespace ACM.BLTest
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ValidateMissingEmail()
+        {
+            var customer = new Customer
+            {
+                LastName = "Wheeler"
+            };
+
+            var expected = false;
+
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 
 }
