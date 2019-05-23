@@ -71,6 +71,16 @@ namespace ACM.BLTest
             Assert.AreEqual(expected.FirstName, actual.FirstName);
             Assert.AreEqual(expected.LastName, actual.LastName);
 
+            for (int i = 0; i<1; i++)
+            {
+                Assert.AreEqual(expected.AddressList[i].AddressType, actual.AddressList[i].AddressType);
+                Assert.AreEqual(expected.AddressList[i].AddressLine1, actual.AddressList[i].AddressLine1);
+                Assert.AreEqual(expected.AddressList[i].Postcode, actual.AddressList[i].Postcode);
+                Assert.AreEqual(expected.AddressList[i].City, actual.AddressList[i].City);
+                Assert.AreEqual(expected.AddressList[i].State, actual.AddressList[i].State);
+                Assert.AreEqual(expected.AddressList[i].Country, actual.AddressList[i].Country);
+            }
+
         }
     }
 }
