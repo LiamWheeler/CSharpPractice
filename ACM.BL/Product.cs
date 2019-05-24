@@ -23,6 +23,8 @@ namespace ACM.BL
         public decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
 
+        public override string ToString() => ProductName;
+
         /// <summary>
         /// Validates the product data
         /// </summary>

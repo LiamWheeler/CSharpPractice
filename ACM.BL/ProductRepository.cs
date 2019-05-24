@@ -31,6 +31,9 @@ namespace ACM.BL
                 product.Description = "Set of four potted sunflowers";
                 product.CurrentPrice = 9.99M;
             }
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Object: {product.ToString()}");
             return product;
         }
 
