@@ -37,10 +37,29 @@ namespace ACM.BL
             return product;
         }
 
-        public bool save(Product product)
+        public bool Save(Product product)
         {
-            //code that saves the product
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        //call an Insert Stored Procedure
+                    }
+                    else
+                    {
+                        //cal an Update Stored Procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
