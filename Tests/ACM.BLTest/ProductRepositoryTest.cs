@@ -25,5 +25,44 @@ namespace ACM.BLTest
             Assert.AreEqual(expected.ProductName, actual.ProductName);
 
         }
+        [TestMethod()]
+        public void SaveTestValid()
+        {
+            //Arrange
+            var productRepository = new ProductRepository();
+            var updateProduct = new Product(2)
+            {
+                CurrentPrice = 9.99M,
+                Description = "Set of four potted sunflowers",
+                ProductName = "Sunflowers",
+                HasChanges = true
+            };
+
+            //Act
+            var actual = productRepository.Save(updateProduct);
+
+            //Assert
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod()]
+        public void SaveTestMissingPrice()
+        {
+            //Arrange
+            var productRepository = new ProductRepository();
+            var updateProduct = new Product(2)
+            {
+                CurrentPrice = null,
+                Description = "Set of four potted sunflowers",
+                ProductName = "Sunflowers",
+                HasChanges = true
+            };
+
+            //Act
+            var actual = productRepository.Save(updateProduct);
+
+            //Assert
+            Assert.AreEqual(false, actual);
+        }
     }
 }
